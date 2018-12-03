@@ -7,7 +7,17 @@
   <h4>TableOfContents</h4>
   {{ .TableOfContents }}
   <hr />
-  <h4><a href="{{ "/categories/" | relLangURL }}">Categories</a></h4>
+    Taxanomy2
+    {{ range $key, $value := .Site.Taxonomies.categories }}
+	    <li><a href="/categories/{{ $key | urlize  }}">{{ $key | humanize }}</a> ({{ len $value }})</li>
+    {{ end }}
+  <hr />
+  TAGS2
+  {{ range $key, $value := .Site.Taxonomies.tags }}
+    <li><a href="/tags/{{ $key | urlize  }}">{{ $key | humanize }}</a> ({{ len $value }})</li>
+  {{ end }}
+<hr />  
+  <h4><a href="{{ "/categories/" | relLangURL }}">Categories_</a></h4>
   {{ with .Params.Categories }}
   <div>
     <ul>
@@ -29,3 +39,42 @@
   </div>
   {{ end }}
 </div>
+
+<hr />
+
+<!-- sidebar start -->
+<aside>
+  <ul>
+      {{ $currentPage := . }}
+      {{ range .Site.Menus.main }}
+          {{ if .HasChildren }}
+              <li class="{{ if $currentPage.HasMenuCurrent "main" . }}active{{ end }}">
+                  <a href="#">
+                      {{ .Pre }}
+                      <span>{{ .Name }}</span>
+                  </a>
+              </li>
+              <ul class="sub-menu">
+                  {{ range .Children }}
+                      <li class="{{ if $currentPage.IsMenuCurrent "main" . }}active{{ end }}">
+                          <a href="{{ .URL }}">{{ .Name }}</a>
+                      </li>
+                  {{ end }}
+              </ul>
+          {{ else }}
+              <li>
+                  <a href="{{ .URL }}">
+                      {{ .Pre }}
+                      <span>{{ .Name }}</span>
+                  </a>
+              </li>
+          {{ end }}
+      {{ end }}
+      <li>
+          <a href="#" target="_blank">Hardcoded Link 1</a>
+      </li>
+      <li>
+          <a href="#" target="_blank">Hardcoded Link 2</a>
+      </li>
+  </ul>
+</aside>
