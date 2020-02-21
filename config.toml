@@ -1,6 +1,6 @@
-baseURL = "http://example.org/"
+baseURL = "https://new.martinhubacek.cz/"
 languageCode = "en-us"
-title = "Timer | Responsive Multipurpose Bootstrap Hugo Template"
+title = "Martin Hubáček"
 theme = "timer-hugo"
 
 # We Used Ionicons Icon font for Icon, for more details check this link - https://ionicons.com/
