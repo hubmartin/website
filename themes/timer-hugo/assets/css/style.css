@@ -804,7 +804,7 @@ article {
 }
 
 #contact-section {
-  padding: 90px 0;
+  padding: 0;
 }
 
 #contact-section .contact-form {
@@ -931,6 +931,10 @@ article {
 
 .single-post .post-content {
   padding: 40px 0;
+}
+
+.single-post .post-content img {
+  width:100%;
 }
 
 .post-content blockquote p {

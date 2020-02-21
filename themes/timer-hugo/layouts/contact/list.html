@@ -6,6 +6,7 @@
 {{ "<!-- Contact Section Start -->" | safeHTML }}
 <section id="contact-section">
     <div class="container">
+        <!--
         <div class="row">
             <div class="col-md-6 mb-5 mb-md-0">
                 <div class="block">
@@ -45,6 +46,7 @@
                     </div>
                 </div>
             </div>
+            
             <div class="col-md-6">
                 <div class="map-area">
                     {{ with .Site.Data.contact.mapTitle }}<h2 class="subtitle  wow fadeInDown" data-wow-duration="500ms" data-wow-delay=".3s">{{ . }}</h2>{{ end }}
@@ -55,32 +57,54 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div>-->
         <div class="row address-details">
-            <div class="col-lg-3 col-sm-6">
+            <div class="col-lg-4 col-sm-6">
                 <div class="address wow fadeInLeft" data-wow-duration="500ms" data-wow-delay=".3s">
                     <i class="ion-ios-location-outline"></i>
                     {{ with .Site.Data.contact.officeAddress1 }}<h5>{{ . }}</h5>{{ end }}
                 </div>
             </div>
-            <div class="col-lg-3 col-sm-6">
+            {{ if .Site.Data.contact.officeAddress2 }}
+            <div class="col-lg-4 col-sm-6">
                 <div class="address wow fadeInLeft" data-wow-duration="500ms" data-wow-delay=".5s">
                     <i class="ion-ios-location-outline"></i>
                     {{ with .Site.Data.contact.officeAddress2 }}<h5>{{ . }}</h5>{{ end }}
                 </div>
             </div>
-            <div class="col-lg-3 col-sm-6">
+            {{ end }}
+            <div class="col-lg-4 col-sm-6">
                 <div class="email wow fadeInLeft" data-wow-duration="500ms" data-wow-delay=".7s">
                     <i class="ion-ios-email-outline"></i>
                     <p>{{ with .Site.Data.contact.mail1 }}{{ . }}{{ end }}
                         <br>{{ with .Site.Data.contact.mail2 }}{{ . }}{{ end }}</p>
                 </div>
             </div>
-            <div class="col-lg-3 col-sm-6">
+            <div class="col-lg-4 col-sm-6">
                 <div class="phone wow fadeInLeft" data-wow-duration="500ms" data-wow-delay=".9s">
                     <i class="ion-ios-telephone-outline"></i>
                     <p>{{ with .Site.Data.contact.phone1 }}{{ . }}{{ end }}
                         <br>{{ with .Site.Data.contact.phone2 }}{{ . }}{{ end }}</p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4 col-sm-6">
+                <div class="phone wow fadeInLeft" data-wow-duration="500ms" data-wow-delay=".9s">
+                    <i class="ion-social-twitter-outline"></i>
+                    <p><a href="https://twitter.com/hubmartin">{{ with .Site.Data.contact.twitter }}{{ . }}{{ end }}</a></p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-6">
+                <div class="phone wow fadeInLeft" data-wow-duration="500ms" data-wow-delay=".9s">
+                    <i class="ion-social-youtube-outline"></i>
+                    <p><a href="https://youtube.com/hubmartin">{{ with .Site.Data.contact.twitter }}{{ . }}{{ end }}</a></p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-6">
+                <div class="phone wow fadeInLeft" data-wow-duration="500ms" data-wow-delay=".9s">
+                    <i class="ion-social-linkedin-outline"></i>
+                    <p><a href="https://www.linkedin.com/in/martin-hub%C3%A1%C4%8Dek-7b8ab335/">hubmartin</a></p>
                 </div>
             </div>
         </div>

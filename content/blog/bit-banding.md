@@ -2,6 +2,7 @@
 title: "Bit-Banding - fast and safe bit manipulation"
 description:
 date: 2018-04-02
+author: Martin Hubáček
 menu:
   main:
     parent: tutorials
