@@ -3,6 +3,9 @@ languageCode = "en-us"
 title = "Martin Hubáček"
 theme = "timer-hugo"
 
+[markup.goldmark.renderer]
+unsafe= true
+
 # We Used Ionicons Icon font for Icon, for more details check this link - https://ionicons.com/
 
 # Navbar Menus
