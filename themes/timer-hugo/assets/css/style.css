@@ -31,11 +31,11 @@ body {
 }
 
 ul {
-  padding-left: 0;
+  /*padding-left: 0;*/
 }
 
 ul li {
-  list-style: none;
+  /*list-style: none;*/
 }
 
 a:hover {
@@ -934,7 +934,11 @@ article {
 }
 
 .single-post .post-content img {
-  width:100%;
+  max-width:100%;
+}
+
+.single-post .post-content pre {
+  color:#369d2a !important;
 }
 
 .post-content blockquote p {
