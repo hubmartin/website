@@ -25,7 +25,7 @@ Improved and more advanced menu for small embedded systems.
 
 ### Download
 
-[Download menu library v2](m2lib_2_0.zip)
+https://github.com/hubmartin/menu_library_v2
 
 ### Demo
 
