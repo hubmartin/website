@@ -2,6 +2,7 @@
 title: STM32 Cortex M0 bare metal GCC assembly blinking LED
 description:
 date: 2018-04-02
+type: post
 menu:
   main:
     parent: tutorials

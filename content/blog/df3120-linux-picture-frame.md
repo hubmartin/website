@@ -2,6 +2,7 @@
 title: DF3120 Linux picture frame
 description:
 date: 2018-04-02
+type: post
 menu:
   main:
     parent: tutorials
