@@ -6,7 +6,8 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                {{ range .Data.Pages }}
+                {{ $paginator := .Paginate (where .Data.Pages "Type" "post") }}
+                {{ range $paginator.Pages }}
                 <article>
                     
                     <div class="blog-post-image">
@@ -37,6 +38,7 @@
                     </div>
                 </article>
                 {{ end }}
+                {{ template "_internal/pagination.html" . }}
             </div>
         </div>
     </div>
