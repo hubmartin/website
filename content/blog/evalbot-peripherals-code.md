@@ -14,7 +14,7 @@ I put together all the interesting examples from Stellarisware and ported them t
 
 Now some rubbish from the comments:
 
-```
+```c
 
 /*
  * Start with EvalBot is little harder because

@@ -1,34 +1,34 @@
 enable  : true
 title   : Offer From Me
 subtitle: >
-  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed, <br> quasi dolores numquam dolor vero ex, tempora commodi      repellendus quod laborum.
+  I have experience with these areas
 item    :
   - icon  : ion-ios-flask-outline
-    title : Media heading
+    title : Embedded microcontrollers
     description : >
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, sint.
+      STM32, Nordic Semiconductor, Microchip, NXP, Espressif
 
   - icon  : ion-ios-lightbulb-outline
-    title : Well documented.
+    title : Communication
     description : >
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, sint.
+      USB, Ethernet, RS-485, Modbus, CAN BUS
 
   - icon  : ion-ios-americanfootball-outline
-    title : Free updates
+    title : Wireless & LPWAN
     description : >
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, sint.
+      NB-IoT, LoRaWAN, Sigfox, BLE
 
   - icon  : ion-ios-keypad-outline
-    title : Solid Support
+    title : FPGA
     description : >
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, sint.
+      Lattice ICE40, Verilog, YOSYS OSS toolchain
 
   - icon  : ion-ios-barcode-outline
-    title : Simple Installation
+    title : Firmware
     description : >
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, sint.
+      C, C++, FreeRTOS, ZephyrOS
   
   - icon  : ion-ios-lightbulb-outline
-    title : Well documented.
+    title : Other
     description : >
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, sint.
+      Node.js, Python, JavaScript, Websockets, Grafana, InfluxDB, MongoDB, Linux

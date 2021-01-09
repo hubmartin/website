@@ -15,21 +15,21 @@ I needed to drive WS2812B RGB LED or NeoPixel strips from my MCU. I quite like a
 Someone else can find different methods more interesting. Also there are different aspects like how efficiently you use RAM. Whether the real RGB frame buffer is pre-computed or you generate specific waveforms on the fly. Scaling is also important if you would need more strips connected to different MCU ports.
 
 Below you will find some theory and decisions I've made during development.\
-Final WS2812b libraries with some more README explanation is on my GitHub 
+Final WS2812b libraries with some more README explanation is on my GitHub
 
--   [STM32F3](https://github.com/hubmartin/WS2812B_STM32F3)
--   [STM32F4](https://github.com/hubmartin/WS2812B_STM32F4)
--   [STM32L0](https://github.com/hubmartin/WS2812B_STM32L083CZ)
--   [STM32F1](https://github.com/hubmartin/WS2812B_STM32F103)
-  
-  **There is a few efficient methods to drive these WS2812B LEDs**
+- [STM32F3](https://github.com/hubmartin/WS2812B_STM32F3)
+- [STM32F4](https://github.com/hubmartin/WS2812B_STM32F4)
+- [STM32L0](https://github.com/hubmartin/WS2812B_STM32L083CZ)
+- [STM32F1](https://github.com/hubmartin/WS2812B_STM32F103)
+
+There is a few efficient methods to drive these WS2812B LEDs.
 
 ### DMA > SPI/I2S peripheral
 
 You use only MOSI signal from MCU. You select appropriate clock speed for this peripheral so the waveform of MISO could generate necessary "0" and "1" bits. Then you create buffer with this specific bit patterns and you command the DMA to send that buffer to SPI->TX register.
 
-* **+** very precise timing
-* **-** cannot be scaled if you need more than 4 strips that are not connected in series
+- **+** very precise timing
+- **-** cannot be scaled if you need more than 4 strips that are not connected in series
 
 ### DMA > TIMer Output compare register
 
@@ -38,9 +38,10 @@ You set DMA that will copy pre-computed value from memory to TIMer output compar
 This method is used by Daedaluz library: <https://github.com/Daedaluz/stm32-ws2812>
 
 ### TIMer > DMA > GPIO
+
 This is I think the most complicated method but it can easily be scaled. It involves some jitter in generated signal but this jitter is way below the specification of WS2812B driving signals. It works like this. You have one TIMer which has period 1.25us. Then you use two output compare registers from the timer. One to create a shorter pulse for "0" bit and second compare register for longer "1" bit. Then you set three DMA channels. All DMAs will write directly to GPIO output register. First DMA will be triggered by TIMx_UP (overflow) event and sets GPIO output pins to HIGH. Then the second DMA will be triggered by output compare one and will drive the GPIO output signal LOW in case you need send "0" bit to the LED strip. Then the third DMA will be triggered by compare two and will drive all GPIO output signals to LOW no matter if the pin is in HIGH or already logic LOW value.
 
-![](WS2812B-DMA-timing-diagram.png)
+![timing diagram](WS2812B-DMA-timing-diagram.png)
 
 Since the STM32 has 16bit ports. You can control up to 16 LED strips. There is one limitation but we can get get around. Because we are writing to the whole 16 bit port we can't use any other pin from this port even if we use only one output for our LED strip. The DMA will write to GPIO output data register and will overwrite all unused bits. Fortunately almost every ARM vendor has in his GPIO peripheral register register we can take advantage of. It's usually called "bit set" or "bit reset" register. This register is used to improve old "read-modify-write" behavior. With these you can atomically change one bit of the port without affecting the others. Now you have to only change that three DMAs to write to destinations to these registers and generate one, five or sixteen waveforms for WS2812 LED strips.
 
@@ -56,7 +57,7 @@ In case I will drive really lot of LEDs. I will need image frame buffer and then
 
 There will be more CPU utilization of course but I gain more RAM. This needs to be explored.
 
-**Update 1.10.2016: Moving to a faster/newer STM32F Cortex-M4 device with few improvements**
+## Update 1.10.2016: Moving to a faster/newer STM32F Cortex-M4 device with few improvements
 
 so I've implemented improvements above and created internal bit-buffer which is updated in IRQ on-the-fly.
 
@@ -81,9 +82,10 @@ I had also fun with logical ANDing/ORing two LED strips into the third one. It i
 {{< youtube "UrwhQBIo1qE" >}}
 
 The same method is also used here:
-* https://github.com/PaulStoffregen/OctoWS2811
-* <https://github.com/g4lvanix/0xWS2812>
-* <http://mcuoneclipse.com/2015/08/05/tutorial-adafruit-ws2812b-neopixels-with-the-freescale-frdm-k64f-board-part-5-dma/>
+
+- <https://github.com/PaulStoffregen/OctoWS2811>
+- <https://github.com/g4lvanix/0xWS2812>
+- <http://mcuoneclipse.com/2015/08/05/tutorial-adafruit-ws2812b-neopixels-with-the-freescale-frdm-k64f-board-part-5-dma/>
 
 Interesting timing experiments with WS2812B\
 <https://cpldcpu.wordpress.com/2014/01/14/light_ws2812-library-v2-0-part-i-understanding-the-ws2812/>

@@ -45,8 +45,8 @@ googleAnalitycsID = "Your ID"
 [params.banner]
 enable  = true
 bgImage = "images/slider.jpg"
-heading = "HI, MY NAME IS JONATHON & I AM A"
-description = "WITH 10 YEARS EXPERIENCE, I'VE OCCUPIED MANY ROLES INCLUDING DIGITAL DESIGN DIRECTOR, WEB DESIGNER AND DEVELOPER. THIS SITE SHOWCASES SOME OF MY WORK."
+heading = "HI, MY NAME IS Martin Hubacek & I AM A"
+#description = "WITH 10 YEARS EXPERIENCE, I'VE OCCUPIED MANY ROLES INCLUDING DIGITAL DESIGN DIRECTOR, WEB DESIGNER AND DEVELOPER. THIS SITE SHOWCASES SOME OF MY WORK."
 # button
 btn     = false
 btnText = "Download More"
@@ -54,17 +54,17 @@ btnURL  = "https://themefisher.com/"
 
 # flip text
 [[params.banner.flipText]]
-title   = "DESIGNER"
+title   = "embedded developer"
 [[params.banner.flipText]]
-title   = "DEVELOPER"
+title   = "electronics designer"
 [[params.banner.flipText]]
-title   = "FATHER"
+title   = "IoT & LPWAN enthusiast"
 
 # Homepage About Section
 [params.about]
 enable  = true
 title   = "ABOUT ME"
-content = "Hello, I’m a UI/UX Designer & Front End Developer from Victoria, Australia. I hold a master degree of Web Design from the World University.And scrambled it to make a type specimen book. It has survived not only five centuries. <br> <br> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error, adipisci voluptatum repudiandae, natus impedit repellat aut officia illum at assumenda iusto reiciendis placeat. Temporibus, vero."
+content = "I design and program embedded electronic devices. I'm familiar with many current microcontrollers, firmware stacks, communication interfaces including low power wireless and IoT."
 image   = "images/about/about.jpg"
 
 # Call to Action
