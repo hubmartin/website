@@ -1,6 +1,6 @@
 ---
 title: "Evalbot LED blink"
-date: 2011-01-25T12:27:38+06:00
+date: 2011-01-30
 description : "This is meta description"
 type: post
 image: blog/evalbot-led-blink/image.png

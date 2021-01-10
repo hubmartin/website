@@ -10,6 +10,8 @@ menu:
 
 This example code should explain the basic bare metal program in assembly language. It can be used on many ARM Cortex M processors from M0 to M7 and from different manufacturers. Not just ST Microelectronics. This is because current example is so simple right now. I have plans to test and port this tutorials also on TI TIVA (former Stellaris, former LuminaryMicro) , NXP LPC processors.
 
+<!--more-->
+
 You can get the code also on my Github
 https://github.com/hubmartin/ARM-cortex-M-bare-metal-assembler-examples/
 

@@ -1,7 +1,7 @@
 ---
 title: Evalbot I2C & Nunchuk lib
 description:
-date: 2018-04-02
+date: 2011-01-30
 type: post
 menu:
   main:

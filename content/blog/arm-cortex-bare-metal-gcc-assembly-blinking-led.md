@@ -8,10 +8,11 @@ menu:
     parent: tutorials
 ---
 
-TODO - just a code. The tutorial will be written soon.
-
 The up-to-date version is always on GitHub 
 https://github.com/hubmartin/ARM-cortex-M-bare-metal-assembler-examples
+
+<!--more-->
+
 
 Blinking an LED
 
