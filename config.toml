@@ -33,7 +33,7 @@ weight  = 6
 # Site Params
 [params]
 home = "Home"
-logo = "images/logo.png"
+logo = "images/pcb_400x400.png"
 dateFormat = "6 January 2006"
 # Meta data
 description = "Airspace Hugo theme"
@@ -44,7 +44,7 @@ googleAnalitycsID = "Your ID"
 # Banner Section
 [params.banner]
 enable  = true
-bgImage = "images/slider.jpg"
+bgImage = "images/bga-challenge.jpg"
 heading = "HI, MY NAME IS Martin Hubacek & I AM A"
 #description = "WITH 10 YEARS EXPERIENCE, I'VE OCCUPIED MANY ROLES INCLUDING DIGITAL DESIGN DIRECTOR, WEB DESIGNER AND DEVELOPER. THIS SITE SHOWCASES SOME OF MY WORK."
 # button
