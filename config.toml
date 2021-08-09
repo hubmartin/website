@@ -1,4 +1,4 @@
-baseURL = "https://new.martinhubacek.cz/"
+baseURL = "https://www.martinhubacek.cz/"
 languageCode = "en-us"
 title = "Martin Hubáček"
 theme = "timer-hugo"
