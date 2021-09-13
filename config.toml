@@ -60,6 +60,10 @@ title   = "electronics designer"
 [[params.banner.flipText]]
 title   = "IoT & LPWAN enthusiast"
 
+# Homepage Blogs Section
+[params.blogs]
+enable  = true
+
 # Homepage About Section
 [params.about]
 enable  = true
