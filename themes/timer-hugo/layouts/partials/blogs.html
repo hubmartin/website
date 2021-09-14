@@ -3,14 +3,17 @@
 <section id="blogs">
     <div class="container">
         <div class="row">
-            <h3>BLOGS</h3>
             <div class="col-md-12">
-                <ul>
-                    {{ range first 5 (where .Site.RegularPages "Type" "post") }}
-                    <li><a href="{{ .Page.RelPermalink }}">{{ .Page.Title }}</a>
-                    </li>
-                    {{ end }}
-                </ul>
+                <div class="block wow">
+                    <h2>Latest blogposts</h2>
+                    <ul>
+                        {{ range first 5 (where .Site.RegularPages "Type" "post") }}
+                        <li><a href="{{ .Page.RelPermalink }}">{{ .Page.Title }}</a>
+                        </li>
+                        {{ end }}
+                    </ul>
+                    <div><a href="/blog">and more...</a></div>
+                </div>    
             </div>
         </div>
     </div>
