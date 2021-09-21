@@ -9,6 +9,8 @@ tags: ["epaper","waveshare"]
 
 ---
 
+You can find other photos and info also in [my tweets](https://twitter.com/hubmartin/status/1439667377642352647).
+
 I used few smaller e-papers with ESP32. I also tried 7.5" V2 display but I had memory and reboot issues on ESP32. First I wanted to make low power battery operated client display with ESP32, but now I changed my mind and I use power supply with ESP32 and epaper.
 
 With permanent power supply and issues with ESP32 developemnt, I wanted more flexible update, debug and control of my devices. So I connected Raspberry Pi 3B+ and created a simple client script which just displays received PNG image over SSH ([rpi-epaper](https://github.com/hubmartin/rpi-epaper)). The server part creates a screenshot and sends it to the Rpi clients with displays.
