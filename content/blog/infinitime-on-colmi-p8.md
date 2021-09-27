@@ -27,7 +27,8 @@ It turned out that 7 seconds is one of the intervals of wathchdog. So I searched
 
 I found this image somewhere on [http://atcnetz.de/](http://atcnetz.de/) and after the pins were changed, the watch worked almost fine!
 
-![P8 pinout](p8-pinout.jpg)
+{{< load-photoswipe >}}
+{{< figure src="/blog/infinitime-on-colmi-p8/p8-pinout.jpg" >}}
 
 Also other 2 pins needed to be changed too. I used this script to automate change.
 
@@ -73,5 +74,7 @@ I also added support to use Nordic BLE NUS uart service. With that you can conne
 - [https://terminal.hardwario.com/](https://terminal.hardwario.com/) - You can use any chromium based browser with BLE support and connect from the web browser.
 - [Python tools for Infinitime BLE NUS](https://github.com/hubmartin/InfiniTime-tools)
 
-![](IMG_20210803_151757.jpg)
-![](IMG_20210723_232118.jpg)
+
+{{< figure src="/blog/infinitime-on-colmi-p8/IMG_20210803_151757.jpg" >}}
+{{< figure src="/blog/infinitime-on-colmi-p8/IMG_20210723_232118.jpg" >}}
+
