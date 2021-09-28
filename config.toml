@@ -39,7 +39,7 @@ dateFormat = "6 January 2006"
 description = "Airspace Hugo theme"
 author = "Themefisher"
 # Google Analitycs
-googleAnalitycsID = "Your ID"
+googleAnalitycsID = "UA-8883016-3"
 
 # Banner Section
 [params.banner]
