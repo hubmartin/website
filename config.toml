@@ -45,7 +45,7 @@ googleAnalitycsID = "UA-8883016-3"
 [params.banner]
 enable  = true
 bgImage = "images/bga-challenge.jpg"
-heading = "HI, MY NAME IS Martin Hubacek & I AM A"
+heading = "HI, MY NAME IS Martin Hubacek & I AM"
 #description = "WITH 10 YEARS EXPERIENCE, I'VE OCCUPIED MANY ROLES INCLUDING DIGITAL DESIGN DIRECTOR, WEB DESIGNER AND DEVELOPER. THIS SITE SHOWCASES SOME OF MY WORK."
 # button
 btn     = false
