@@ -153,7 +153,7 @@ The WS2812 is 5V device, but if you connect just few of them to the 3V power sup
 
 ## Improve gateware
 
-First import WS2812 in the begining of your python file.
+First import WS2812 in the begining of your 'targets/tinyfpga_bx.py' python file.
 
 ```python
 from litex.soc.cores.led import LedChaser, WS2812
@@ -236,7 +236,9 @@ And in `mem.h` you can see our WS2812 peripheral and its address
 
 ## Linker edits
 
-Because tinyFPGA does not have main RAM where the code will run, we need to change `demo/linker.ld` code a bit and replace all `main_ram` with `rom`.
+Because tinyFPGA does not have initialized main RAM to save LUTs (called `main_ram` in the linker) where the code will run, we need to change `demo/linker.ld` code a bit.
+
+Replace all occurrences of `main_ram` with `rom`.
 
 Now you can recompile and upload the demo firmware, it should boot
 
