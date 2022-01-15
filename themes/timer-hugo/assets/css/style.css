@@ -287,7 +287,7 @@ a:hover {
 
 #hero-area {
   background-repeat: no-repeat;
-  background-position: center center;
+  background-position: center -200px;
   background-size: cover;
   background-attachment: fixed;
   padding: 10px 0;
@@ -319,7 +319,7 @@ a:hover {
   font-weight: 700;
   margin-bottom: 0;
   text-transform: uppercase;
-  padding: 150px 0;
+  padding: 150px 0 60px 0;
 }
 
 #hero-area h2 {
