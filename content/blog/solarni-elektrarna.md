@@ -8,10 +8,49 @@ author: Martin Hubáček
 tags: ["solar"]
 ---
 
-
 Soupis všeho kolem mého solárního počinu. Bude postupně sepisováno.. snad.
 <!--more-->
 
+
+<div id="toc">
+    <h3>Obsah</h3>
+</div>
+
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  htmlTableOfContents();
+}
+);                        
+
+
+function htmlTableOfContents (documentRef) {
+    var documentRef = documentRef || document;
+    var toc = documentRef.getElementById('toc');
+    var headings = [].slice.call(documentRef.body.querySelectorAll('h1, h2, h3, h4, h5, h6'));
+    headings.forEach(function (heading, index) {
+        if(index < 2)
+            return;
+        var anchor = documentRef.createElement('a');
+        anchor.setAttribute('name', 'toc' + index);
+        anchor.setAttribute('id', 'toc' + index);
+
+        var link = documentRef.createElement('a');
+        link.setAttribute('href', '#toc' + index);
+        link.textContent = heading.textContent;
+
+        var div = documentRef.createElement('div');
+        div.style.paddingLeft = parseInt(heading.tagName.substr(1,1)) * 20 + "px";
+        //div.setAttribute('class', heading.tagName.toLowerCase());
+
+        div.appendChild(link);
+        toc.appendChild(div);
+        heading.parentNode.insertBefore(anchor, heading);
+    });
+}
+
+    </script>
 
 # Úvod
 
@@ -34,35 +73,60 @@ Od začátku jsem chtěl systém, který:
 - nechci prodávat elektřinu
 - nechci dotace, projekty, byrokracii
 
+## Obhlídka terénu a poloha slunce v zimě⛄
+
+V našich podmínkách je v zimě slunce nad obzorem asi 19°. Pro základní obhlídku plochy garáže jsem použil Android appku [Clinometer Camera](https://play.google.com/store/apps/details?id=com.marathon.clinometer.vs&hl=cs&gl=US) kde je možné kameru natočit na překážku a z akcelerometru se určí úhel (elevace?). Dovede si tak udělat představu která místa jsou při nízkém slunci v zimě zastíněna.
+
+Dalším krokem byla aplikace která vám přes "Augumented reality" doplní do obrazu z kamery polohu slunce. Používá akcelerometr i magnetometr (pro azimut) a je to překvapivě dost přesné. Můžete zkusit že když foťák namíříte na slunce, tak se predikovaná pozice slunce fakt překrývá.
+
+Doporučím tyhle dvě Android appky
+
+- [SunPath](https://play.google.com/store/apps/details?id=nl.uva.sunpath&hl=cs&gl=US)
+- [Sun's Path](https://play.google.com/store/apps/details?id=jp.gr.java_conf.siranet.sunshine&hl=cs&gl=US)
+
+![Sun's Path](sunspath.png)
+
 # Vyvrcholení
 
-Pro první verzi elektrárny jsem si říkal, že nahodím panely na plochou garáž. Je to trochu komplikovanější protože v zimě je asi půlka zakrytá, ale vymyslel jsem to tak že jedna řada panelů bude pod úhlem 30° vždy na slunci. 
+Pro první verzi elektrárny jsem si říkal, že nahodím panely na plochou garáž. Je to trochu komplikovanější protože v zimě je asi půlka zakrytá sousedním domě, ale vymyslel jsem to tak že jedna řada panelů bude pod úhlem 30° vždy na slunci.
 
-Tato druhá vyšší řada je zoptimalizovaná že panely jsou naležat oa jsou 2 řady nad sebou, 4 vedle sebe. Panel 300Wp, takže celkových 2,4 kWp.
+Tato první vyšší řada je zoptimalizovaná že panely jsou naležato a jsou 2 řady nad sebou, 4 vedle sebe. Panel 300Wp, takže celkových 2,4 kWp.
 
-První řada, která je v zimě zastíněná, má menší sklon asi 20° a vejdou se tam čtyři 300 Wp panely naležato vedle sebe - 1200 Wp. Menší úhel je zvolený aby nestínil druhé řadě panelů.
+Druhá, menší řada, která je v zimě zastíněná, má menší sklon asi 20° a vejdou se tam čtyři 300 Wp panely naležato vedle sebe - 1200 Wp. Menší úhel je zvolený aby nestínil druhé řadě panelů.
 
-![](garaz-letecky.png)
+![Vizualizace rozmístění panelů na garáži](garaz-letecky.png)
 
 Na výpočet rozměrů a úhlů postavení panelů s ohledem na nejnižší úhel slunce v zimě jsem si udělal ve FreeCADu hezký parametrický model pohledu z boku.
 
-![](freecad.jfif)
+![Parametrický model úhlů solárních panelů](freecad.jfif)
 
 Tak jsem si zjistil zda se mi ty 2 řady za sebou na 4 metrovou šířku garáže vejdou.
 
-### Parametry
+Poměrně dlouho jsem si s rozložením hrál. Ta menší druhá řada panelů je v zimě zastíněná sousedním domem. Takže pokud ji chci vyřadit přes zimu, musím ji nějak odpojovat. Oboje zapojení ale musí vyhovovat min/max napětí měniče. Takže 8 panelů měnič dá, 10 tak tak a když jich je více, tak sice v létě to maximální nezatížené napětí vychází pod 450, ale když klesne teplota a článek má vyšší efektivitu tak mohou nastat světelné podmínky kdy to vyrobí i 110% výkonu a hned máte na stringu 500 V i přesto, že vám dle štítku na panelu vycházelo krásných 440 V.
+
+Zde je tabulka výpočtů počtu panelů v sérii a různé projekce maximálního napětí při nízkých teplotách.
+
+![](vypocty.png)
+
+Z tabulky je patrné, že 11 panelů by v létě šlo, ale při nižších teplotách by to mohlo bouchnout. Někde jsem četl, že i v létě po chladném dešti a rozložení mraku může nastat situace, kdy panel dostane přímý zásah slunce, ale od okolních mraků ještě další fotony difuzním osvětlením a jste na hraně s napětím.
+
+Trochu jsem si říkal, jestli nezapojím těch 11 a nedám k měniči nějaký výkonový rezistor, který by zaručil že tam úplně otevřené napětí nikdy nebude. Možná existuje i nějaký MOSFET/transil? Nevím.
+
+# Parametry
+
+Vybral jsem tyto komponenty:
 
 * Axpert MKS III 5kW, 450V string
 * Pylontech US2000C 2.4kW
 
-### Měnič a dobíječ Axpert
+## Měnič a dobíječ Axpert🔌
 
 Tato čínská bedýnka od firmy Voltronic v sobě spojuje jeden MPPT dobíječ pro string s napětím 120-430V a 5 kW invertor. Maximální napětí je 450V. Tohle se mi dost líbí, protože spojít spoustu panelů a nemusíte je spojovat sérioparalelně. Navíc nejste připraveni o elektrický oblouk když nesprávným způsobem odpojujete string pod proudem :)
 
 Zatím funguje parádně, pokud mě jednou zklame, půjde z baráku a další zařízení by bylo asi od Victronu.
 Tento Axpert se dá spojovat paralelně, takže je možné druhým kusem posílit výkon na 10 kW a získám tím druhý MPPT vstup z dalšího solárního stringu. Idle spotřeba je ve 10W, ale to je Standby s vypnutým invertorem. Běžně jste na 60 W. Je proto na zvážení jestli mít jeden výkonnější měnič co bere 90W v idle, nebo dva stejné kde součet bude 120W.
 
-### Pylontech US2000C
+## Pylontech US2000C🔋
 
 Tady jsem dost řešil jestli olovo, nebo lithium. Naštěstí mi bylo olovo rozmluveno jedním solárníkem, dokonce i Ampérák to někde počítal, že pokud nemáte přísun levných baterií tak lithium vydrží déle. Já v tom nejsem úplný expert takže můžete mít jiný názor :)
 
@@ -73,7 +137,9 @@ Něco co se blíží tomuto konceptu nabízí [JK BMS](https://www.aliexpress.co
 
 Ohledně kapacity je zas nutné si uvědomit, že pokud má měnič idle spotřebu 60W, tak přes období třeba 14 hodin kdy od večera do rána nesvítí spotřebuje z baterek 840 Wh.
 
-## Vizualizace
+Pořídil jsem pro začátek 2 ks, ale už teď nějak cítím, že bude třeba přikoupit. Navíc dělat elektrárnu teď před podzimem, kdy každým dnem je energie méně a méně, je dost depresivní 🙂
+
+## Vizualizace📈
 
 Doma mám centrální server na kterém mi běží tyto služby. Celkem známá trojkombinace kterou používám již roky s naší IoT stavebnicí [HARDWARIO TOWER](https://tower.hardwario.com/).
 
@@ -95,7 +161,7 @@ Pro každé zařízení/převodník mám v RPI jednu službu která přetransfor
 Rozšířil jsem projekt [axpert-monitor](https://github.com/b48736/axpert-monitor) a přidal si k němu MQTT posílání a možnost ovládání.
 Je to nodejs aplikace. Moc v tom neumím a je to rozšířené narychlo, takže se není čím chlubit. Ale prošel jsem hromadu různých projektů v různých jazycích a tohle prostě fungovalo.
 
-Můj projekt naleznete [na Githubu](https://github.com/hubmartin/axpert-monitor-mqtt).
+Můj projekt [axpert-monitor-mqtt naleznete zde](https://github.com/hubmartin/axpert-monitor-mqtt).
 
 ### Pylontech monitoring
 
@@ -127,5 +193,9 @@ Pro pokročilejší grafy a analýzy používám (starší) InfluxDB 1.8 a nást
 
 Po MQTT chci aktualizace každou vteřinu (proč ne) ale do DB je to zbytečné. Občas tento interval trochu zkrátím když dělám pokusy jako test zatížení apod., abych měl víc bodů k pozdější analýze.
 
+Kompletní flow z ukázky výše si můžete do Node-RED importovat následujícím JSONem
 
+```
+[{"id":"4a04d7eda726bfed","type":"mqtt in","z":"07cff771031e69d3","name":"","topic":"axpert/test","qos":"2","datatype":"json","broker":"efb90626.1e64b8","nl":false,"rap":true,"rh":0,"inputs":0,"x":200,"y":300,"wires":[["631854f2f315b7af","a284db87f09675c4","d6e10f9c505e472a","9d611699a56a9a86","5aa7e291b1b3be59","e323f3e10f3225ed"]]},{"id":"6c841eb30e9d1cf8","type":"influxdb out","z":"07cff771031e69d3","influxdb":"4aa793cd0438b3f3","name":"","measurement":"main","precision":"","retentionPolicy":"","x":850,"y":220,"wires":[]},{"id":"40dfa3996fabc5c8","type":"function","z":"07cff771031e69d3","name":"","func":"\nconst flattenJSON = (obj = {}, res = {}, extraKey = '') => {\n   for(key in obj){\n      if(typeof obj[key] !== 'object'){\n         res[extraKey + key] = obj[key];\n      }else{\n         flattenJSON(obj[key], res, `${extraKey}${key}.`);\n      };\n   };\n   return res;\n};\n\n\nmsg.payload = flattenJSON(msg.payload);\n\nreturn msg;","outputs":1,"noerr":0,"initialize":"","finalize":"","libs":[],"x":620,"y":220,"wires":[["6c841eb30e9d1cf8","cc277891fb385f5a"]]},{"id":"cc277891fb385f5a","type":"debug","z":"07cff771031e69d3","name":"","active":false,"tosidebar":true,"console":false,"tostatus":false,"complete":"false","statusVal":"","statusType":"auto","x":810,"y":280,"wires":[]},{"id":"631854f2f315b7af","type":"throttle","z":"07cff771031e69d3","name":"","throttleType":"time","timeLimit":"15","timeLimitType":"seconds","countLimit":0,"blockSize":0,"locked":false,"x":470,"y":220,"wires":[["40dfa3996fabc5c8"]]},{"id":"a284db87f09675c4","type":"debug","z":"07cff771031e69d3","name":"","active":false,"tosidebar":true,"console":false,"tostatus":false,"complete":"false","statusVal":"","statusType":"auto","x":490,"y":280,"wires":[]},{"id":"d6e10f9c505e472a","type":"ui_gauge","z":"07cff771031e69d3","name":"","group":"e3f86af73aa4cc91","order":1,"width":"2","height":"2","gtype":"donut","title":"Output","label":"W","format":"{{payload.outputPowerActive}}","min":0,"max":"5000","colors":["#00b500","#e6e600","#ca3838"],"seg1":"","seg2":"","className":"","x":470,"y":340,"wires":[]},{"id":"9d611699a56a9a86","type":"ui_gauge","z":"07cff771031e69d3","name":"","group":"e3f86af73aa4cc91","order":4,"width":"2","height":"2","gtype":"donut","title":"Battery","label":"%","format":"{{payload.batteryCapacity}}","min":0,"max":"100","colors":["#00b500","#e6e600","#ca3838"],"seg1":"","seg2":"","className":"","x":480,"y":380,"wires":[]},{"id":"5aa7e291b1b3be59","type":"ui_gauge","z":"07cff771031e69d3","name":"","group":"e3f86af73aa4cc91","order":3,"width":"2","height":"2","gtype":"donut","title":"Load","label":"%","format":"{{payload.outputLoadPercent}}","min":0,"max":"100","colors":["#00b500","#e6e600","#ca3838"],"seg1":"","seg2":"","className":"","x":470,"y":420,"wires":[]},{"id":"e323f3e10f3225ed","type":"ui_gauge","z":"07cff771031e69d3","name":"","group":"e3f86af73aa4cc91","order":2,"width":"2","height":"2","gtype":"donut","title":"PV Power","label":"W","format":"{{payload.pvPower}}","min":0,"max":"2000","colors":["#00b500","#e6e600","#ca3838"],"seg1":"","seg2":"","className":"","x":480,"y":460,"wires":[]},{"id":"efb90626.1e64b8","type":"mqtt-broker","broker":"127.0.0.1","port":"1883","clientid":"","autoConnect":true,"usetls":false,"protocolVersion":4,"keepalive":"60","cleansession":true,"birthTopic":"","birthQos":"0","birthPayload":"","willTopic":"","willQos":"0","willPayload":""},{"id":"4aa793cd0438b3f3","type":"influxdb","hostname":"127.0.0.1","port":"8086","protocol":"http","database":"fve","name":"","usetls":false,"tls":""},{"id":"e3f86af73aa4cc91","type":"ui_group","name":"Electricity","tab":"e8a3e7671183bf0f","order":1,"disp":true,"width":"6","collapse":false,"className":""},{"id":"e8a3e7671183bf0f","type":"ui_tab","name":"FVE","icon":"dashboard","order":7,"disabled":false,"hidden":false}]
+```
 
