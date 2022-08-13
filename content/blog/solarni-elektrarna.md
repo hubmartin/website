@@ -11,54 +11,21 @@ tags: ["solar"]
 Soupis všeho kolem mého solárního počinu. Bude postupně sepisováno.. snad.
 <!--more-->
 
+Tento článek se snad bude postupně rozvíjet. Pokud naleznete překlepy nebo máte návrhy na úpravy, vytvořte k tomuto článku pull request na odkazu níže.
 
-<div id="toc">
-    <h3>Obsah</h3>
-</div>
-
+{{% github-url %}}
 
 
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-  htmlTableOfContents();
-}
-);                        
+{{% toc %}}
 
 
-function htmlTableOfContents (documentRef) {
-    var documentRef = documentRef || document;
-    var toc = documentRef.getElementById('toc');
-    var headings = [].slice.call(documentRef.body.querySelectorAll('h1, h2, h3, h4, h5, h6'));
-    headings.forEach(function (heading, index) {
-        if(index < 2)
-            return;
-        var anchor = documentRef.createElement('a');
-        anchor.setAttribute('name', 'toc' + index);
-        anchor.setAttribute('id', 'toc' + index);
-
-        var link = documentRef.createElement('a');
-        link.setAttribute('href', '#toc' + index);
-        link.textContent = heading.textContent;
-
-        var div = documentRef.createElement('div');
-        div.style.paddingLeft = parseInt(heading.tagName.substr(1,1)) * 20 + "px";
-        //div.setAttribute('class', heading.tagName.toLowerCase());
-
-        div.appendChild(link);
-        toc.appendChild(div);
-        heading.parentNode.insertBefore(anchor, heading);
-    });
-}
-
-    </script>
-
-# Úvod
+## Úvod
 
 Elektrárnu nosím roky v hlavě, sem tam jsem si něco přečetl, roky měřím spotřebu chytrým elektroměrem a každých 30 sekund ukládám asi 50 veličin. Tehdy jsem ještě netušil proč, ale proč ne :) Takže mám představu v čase a na kterých fázích co se děje v různých ročních obdobích.
 
 Navíc z grafů je dost patrné a po použití (neumělé) inteligence lze rozlišit v nočních hodinách cyklování ledničky, čerpadla kotle. Jiné věci co zase jedou furt (rack se serverem, switchi, WiFi AP, kamery) lze taky vidět a uděláte si tak představu o jakési "idle" spotřebě. Začít řešit tuhle "idle" spotřebu je asi nejsnažší na výpočet a představu jak uspořit. Možná se 100W trvale celý rok moc nezdá, ale v roce je to 870 kWh což může být třeba 5 kKč ročně. (snad moc nekecám)
 
-# Zápletka
+## Zápletka
 
 No a protože se říká, že elektrárnu chcete, když ji má soused, tak došlo i na mě :) Navíc teď vše leze nahoru, komponent moc není, už to dlouho nosím v hlavě a nic nedělám. Je třeba začít.
 
@@ -86,7 +53,7 @@ Doporučím tyhle dvě Android appky
 
 ![Sun's Path](sunspath.png)
 
-# Vyvrcholení
+## Vyvrcholení
 
 Pro první verzi elektrárny jsem si říkal, že nahodím panely na plochou garáž. Je to trochu komplikovanější protože v zimě je asi půlka zakrytá sousedním domě, ale vymyslel jsem to tak že jedna řada panelů bude pod úhlem 30° vždy na slunci.
 
@@ -106,27 +73,29 @@ Poměrně dlouho jsem si s rozložením hrál. Ta menší druhá řada panelů j
 
 Zde je tabulka výpočtů počtu panelů v sérii a různé projekce maximálního napětí při nízkých teplotách.
 
+Na výpočty napětí při různých teplotách jsem použil [tuhle online kalkulačku](https://www.wrdsystems.com/max_voc_calc.php), pokud znáte lepší, pošlete PR na github.
+
 ![](vypocty.png)
 
 Z tabulky je patrné, že 11 panelů by v létě šlo, ale při nižších teplotách by to mohlo bouchnout. Někde jsem četl, že i v létě po chladném dešti a rozložení mraku může nastat situace, kdy panel dostane přímý zásah slunce, ale od okolních mraků ještě další fotony difuzním osvětlením a jste na hraně s napětím.
 
 Trochu jsem si říkal, jestli nezapojím těch 11 a nedám k měniči nějaký výkonový rezistor, který by zaručil že tam úplně otevřené napětí nikdy nebude. Možná existuje i nějaký MOSFET/transil? Nevím.
 
-# Parametry
+## Parametry
 
 Vybral jsem tyto komponenty:
 
 * Axpert MKS III 5kW, 450V string
 * Pylontech US2000C 2.4kW
 
-## Měnič a dobíječ Axpert🔌
+### Měnič a dobíječ Axpert🔌
 
 Tato čínská bedýnka od firmy Voltronic v sobě spojuje jeden MPPT dobíječ pro string s napětím 120-430V a 5 kW invertor. Maximální napětí je 450V. Tohle se mi dost líbí, protože spojít spoustu panelů a nemusíte je spojovat sérioparalelně. Navíc nejste připraveni o elektrický oblouk když nesprávným způsobem odpojujete string pod proudem :)
 
 Zatím funguje parádně, pokud mě jednou zklame, půjde z baráku a další zařízení by bylo asi od Victronu.
 Tento Axpert se dá spojovat paralelně, takže je možné druhým kusem posílit výkon na 10 kW a získám tím druhý MPPT vstup z dalšího solárního stringu. Idle spotřeba je ve 10W, ale to je Standby s vypnutým invertorem. Běžně jste na 60 W. Je proto na zvážení jestli mít jeden výkonnější měnič co bere 90W v idle, nebo dva stejné kde součet bude 120W.
 
-## Pylontech US2000C🔋
+### Pylontech US2000C🔋
 
 Tady jsem dost řešil jestli olovo, nebo lithium. Naštěstí mi bylo olovo rozmluveno jedním solárníkem, dokonce i Ampérák to někde počítal, že pokud nemáte přísun levných baterií tak lithium vydrží déle. Já v tom nejsem úplný expert takže můžete mít jiný názor :)
 
