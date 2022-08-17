@@ -15,6 +15,12 @@ Pokud naleznete překlepy nebo máte návrhy na úpravy, vytvořte k tomuto čl�
 
 {{% github-url %}}
 
+TODO:
+* měniče napětí, modif/čistý sinus
+* bezpečnost požární/elektrická (svodiče, chrnana I a II třídy, odpojovače DC, pojistky)
+* Cenová kalkulace
+* tipy na vytvoření okruhů spotřebičů (nezapojení světel a trouby), řešení souběhu více spotřebičů
+
 
 {{% toc %}}
 
