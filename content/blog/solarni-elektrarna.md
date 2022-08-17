@@ -20,6 +20,7 @@ TODO:
 * bezpečnost požární/elektrická (svodiče, chrnana I a II třídy, odpojovače DC, pojistky)
 * Cenová kalkulace
 * tipy na vytvoření okruhů spotřebičů (nezapojení světel a trouby), řešení souběhu více spotřebičů
+* když je malý odběr, v síti slyším v zesíku rušení
 
 
 {{% toc %}}
