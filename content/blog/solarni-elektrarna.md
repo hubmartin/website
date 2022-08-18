@@ -103,7 +103,12 @@ Tato čínská bedýnka od firmy Voltronic v sobě spojuje jeden MPPT dobíječ 
 
 Zde je ukradený diagram z jiného typu pro představu, že vše co potřebujete je vlastně v měniči a zbývá to jen dobře vymyslet a zapojit.
 
+
 {{< figure src="/blog/solarni-elektrarna/axpert-diagram.jpg" >}}
+
+Pro představu takto vypadají všechny segmenty na displeji. V něm jde rozeznat kudy všudy může energie proudit.
+
+{{< figure src="/blog/solarni-elektrarna/displej.png" >}}
 
 Zatím funguje parádně, pokud mě jednou zklame, půjde z baráku a další zařízení by bylo asi od Victronu.
 Tento Axpert se dá spojovat paralelně, takže je možné druhým kusem posílit výkon na 10 kW a získám tím druhý MPPT vstup z dalšího solárního stringu. Idle spotřeba je uváděna 10W, ale to je Standby s vypnutým invertorem. Běžně jste na 60 W. Je proto na zvážení jestli mít jeden výkonnější měnič co bere třeba 90W v idle, nebo dva stejné kde součet bude 120W.
@@ -165,6 +170,8 @@ Teď ještě čerstvá informace z mypower fóra, že HADEX, distributor podobn�
 ### Přepínač sítí + interní bypass
 
 Zapojil jsem si před měnič ruční přepínač sítí. To je takový trojitý přepínač (někdy je i čtveřitý, když rozdělujete poctivě 3 fáze), který má na vstupu z jedné strany distribuční síť (já mám zapojeno jen L a N), na vstupu druhé straně výstup z měniče (L a N) a na výstupu je připojen váš dům. Přepínač má 3 polohy a prostřední je OFF. Takže nehrozí, že byste oba vstupy zapojili proti sobě. Prodávají se i automatizované čínské přepínače, ale zatím to není nutné.
+
+{{< figure src="/blog/solarni-elektrarna/prepinac-siti.png" >}}
 
 Tento přepínač sítí ale nění nutný. Měnič má interní bypass, kdy překlene vstup s výstupem. Já si ale přepínač zapojil pro případ kdy se budu v části s měničem hrabat, abych nebyl doma bez proudu.
 
