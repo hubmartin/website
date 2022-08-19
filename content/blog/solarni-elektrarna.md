@@ -153,7 +153,7 @@ Zásadně se nesmí panely nebo pojistky odepínat pod zatížením. Při nižš
 
 ### Odepínání baterií
 
-Když už jsme u toho odepínání. Tak pokud měnič baterie nabíjí, tak je nesmíte odpojit. Jakmile měnič drtí 1 kW do baterie a najednou mu zmizí zátěž, tak nedovede to tak rychle uregulovat a prý si tyhle čínské měniče zničí výstupní MOSFETy. Stává se to dokonce když se přeruší poddimenzovaná pojistka. Amperák to vyřešil jednou menší baterií, která je k měniči připojena napřímo bez ochran. Já se trochu ujišťuju že pojistky mám na 120 A a víc jak 25 A tam stejně současné panely nenacpou. A baterky mám dvě, takže i kdyby jedna se nějak odepnula, tak druhá to ještě může zachrnánit. Navíc jak jsem psal výše(níže?) tak měnič si s baterkou povídá a plynule si mění proud a snižuje jej před úplným nabitím. Takže tam snad moc nehrozí, že by baterka vypnula výstup a měnič tlačil výkon do vzduchu.
+Když už jsme u toho odepínání. Tak pokud měnič baterie nabíjí, tak je nesmíte odpojit. Jakmile měnič drtí 1 kW do baterie a najednou mu zmizí zátěž, tak nedovede to tak rychle uregulovat a prý si tyhle čínské měniče zničí výstupní MOSFETy. Stává se to dokonce když se přeruší poddimenzovaná pojistka. Amperák to vyřešil jednou menší baterií, která je k měniči připojena napřímo bez ochran. Já se trochu ujišťuju že pojistky mám na 120 A a víc jak 25 A tam stejně současné panely nenacpou. A baterky mám dvě, takže i kdyby jedna se nějak odepnula, tak druhá to ještě může zachránit. Navíc jak jsem psal výše(níže?) tak měnič si s baterkou povídá a plynule si mění proud a snižuje jej před úplným nabitím. Takže tam snad moc nehrozí, že by baterka vypnula výstup a měnič tlačil výkon do vzduchu.
 
 ## Zapojení do domu
 
