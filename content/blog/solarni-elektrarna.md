@@ -7,11 +7,10 @@ image: blog/solarni-elektrarna/image.png
 author: Martin Hubáček
 tags: ["solar"]
 ---
-
-{{< load-photoswipe >}}
-
 Soupis všeho kolem mého solárního počinu. Bude postupně sepisováno.. snad.
 <!--more-->
+
+{{< load-photoswipe >}}
 
 Pokud naleznete překlepy nebo máte návrhy na úpravy, vytvořte k tomuto článku pull request na GitHubu přes odkaz níže.
 

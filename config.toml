@@ -2,6 +2,7 @@ baseURL = "https://www.martinhubacek.cz/"
 languageCode = "en-us"
 title = "Martin Hubáček"
 theme = "timer-hugo"
+rssLimit = 10
 
 [markup.goldmark.renderer]
 unsafe= true
