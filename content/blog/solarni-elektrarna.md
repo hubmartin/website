@@ -3,7 +3,7 @@ title: "Solární elektrárna"
 date: 2022-08-12T12:27:38+06:00
 description : "Vše co jsem se naučil o solární elektrárně sepsáno, abych to nezapomněl."
 type: post
-image: blog/solarni-elektrarna/image.png
+image: blog/solarni-elektrarna/image.jpg
 author: Martin Hubáček
 tags: ["solar"]
 ---
@@ -68,7 +68,7 @@ Druhá, menší řada, která je v zimě zastíněná, má menší sklon asi 20�
 
 ![Vizualizace rozmístění panelů na garáži](garaz-letecky.png)
 
-Na výpočet rozměrů a úhlů postavení panelů s ohledem na nejnižší úhel slunce v zimě jsem si udělal ve FreeCADu hezký parametrický model pohledu z boku.
+Na výpočet rozměrů a úhlů postavení panelů s ohledem na nejnižší úhel slunce v zimě jsem si udělal ve [FreeCADu hezký parametrický model](solarni-elektrarna.FCStd) pohledu z boku.
 
 {{< figure src="/blog/solarni-elektrarna/freecad.png" >}}
 
