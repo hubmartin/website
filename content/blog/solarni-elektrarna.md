@@ -21,8 +21,6 @@ Nebo mi můžete napsat další návrhy [pod tento tweet](https://twitter.com/hu
 
 {{% toc %}}
 
-
-
 ## Úvod
 
 Elektrárnu nosím roky v hlavě, sem tam jsem si něco přečetl, roky měřím spotřebu chytrým elektroměrem a každých 30 sekund ukládám asi 50 veličin. Tehdy jsem ještě netušil proč, ale proč ne 🙂 Takže mám představu v čase a na kterých fázích co se děje v různých ročních obdobích.
@@ -158,9 +156,9 @@ Když už jsme u toho odepínání. Tak pokud měnič baterie nabíjí, tak je n
 
 ### 3 vodičové TN-S
 
-**Tahle část je hodně na vodě, chybí schémata, důkazy. Číňan samozřejmě neví co je TN-C/S a v návodu tohle nebývá**
+**Tahle část je hodně na vodě, chybí vnitřní schéma měniče, důkazy. Číňan samozřejmě neví co je TN-C/S a v návodu tohle nebývá, na internetech nepanuje jasný názor.**
 
-Měnič má 3 vstupní a 3 výstupní svorky. PE, L, N. Vstupní a výstupní PE jsou spojeny mezi sebou uvnitř. Ale L a N mezi sebou spojeny nejsou. Resp. nikde jsem neviděl rozborku, nebo důkaz. Když jsem to měřil za chodu, tak to vypadá jakoby při zapojení to N spojení s distribuční sítí (DS) bylo, ale na polovině webů (těch evropských) je zdůrazněno, že měnič lze používat jen v síti TN-S. To znamená 3 vodičové zapojení. Jen tak se docílí toho, že PE vodič bude vždy zapojen na zemnící bod a L a N bude bude v závislosti na měniče (invertor nebo bypass) . Ale když to jelo z baterek, tak stejně jsem zam naměřil nulové napětí mezi vstupní a výstupní svorkou N. A byl tam odpor blízký nule.
+Měnič má 3 vstupní a 3 výstupní svorky. PE, L, N. Vstupní a výstupní PE jsou spojeny mezi sebou uvnitř. Ale L a N mezi sebou spojeny nejsou. Resp. nikde jsem neviděl rozborku, nebo důkaz. Když jsem to měřil za chodu, tak to vypadá jakoby při zapojení to N spojení s distribuční sítí (DS) bylo, ale na polovině webů (těch evropských) je zdůrazněno, že měnič lze používat jen v síti TN-S. To znamená 3 vodičové zapojení. Jen tak se docílí toho, že PE vodič bude vždy zapojen na zemnící bod a L a N bude zvolenu v závislosti na módu měniče (invertor nebo vnitřní bypass). Ale když to jelo z baterek, tak stejně jsem zam naměřil nulové napětí mezi vstupní a výstupní svorkou N. A byl tam odpor blízký nule.
 
 Možná jsem to vysvětlil trochu zmateně, ale není jasný závěr a eixstuje [několik vláken](https://forum.mypower.cz/viewtopic.php?f=115&t=7678) kde se to dodnes řeší pořád dokola :)
 
