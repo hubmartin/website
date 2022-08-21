@@ -146,7 +146,7 @@ U mě se elektrárna stále rozšiřuje a dost možná si natáhnu kabely druhý
 
 ### Odepínání panelů
 
-Zásadně se nesmí panely nebo pojistky odepínat pod zatížením. Při nižších napětích to asi trochu zajiskří, ale při stringu na 400V už při odpojení může vzniknout hezký oblouk. Ten když nezhasne, tak se může oblouk mezi vodiči pohybovat a propalovat kabeláž. Takže když odepínat tak zásadně bez zátěže, se korektními DC odepínači na odpovídající DC napětí a nebo prostě v noci :)
+Zásadně se nesmí panely nebo pojistky odepínat pod zatížením. Při nižších napětích to asi trochu zajiskří, ale při stringu na 400V už při odpojení může vzniknout [hezký oblouk](https://www.youtube.com/watch?v=S9a2oPCIMr0). Ten když nezhasne, tak se může oblouk mezi vodiči pohybovat a propalovat kabeláž. Takže když odepínat tak zásadně bez zátěže, se korektními DC odepínači na odpovídající DC napětí a nebo prostě v noci :)
 
 ### Odepínání baterií
 
@@ -162,7 +162,7 @@ Měnič má 3 vstupní a 3 výstupní svorky. PE, L, N. Vstupní a výstupní PE
 
 Možná jsem to vysvětlil trochu zmateně, ale není jasný závěr a eixstuje [několik vláken](https://forum.mypower.cz/viewtopic.php?f=115&t=7678) kde se to dodnes řeší pořád dokola :)
 
-Teď ještě čerstvá informace z mypower fóra, že HADEX, distributor podobného typu měniče, před pár dny odstranil toto doporučení o zákazku propojení vstupní a výstupní N svorky. Někteří uživatelé je mají protpojené několik let a nemají s tím problém.
+*Teď ještě čerstvá informace z mypower fóra, že HADEX, distributor podobného typu měniče, před pár dny odstranil toto doporučení o zákazu propojení vstupní a výstupní N svorky. Někteří uživatelé je mají propojené několik let a nemají s tím problém.*
 
 ### Přepínač sítí + interní bypass
 
