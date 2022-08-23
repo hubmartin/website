@@ -3,15 +3,14 @@ title: "Solární elektrárna"
 date: 2022-08-12T12:27:38+06:00
 description : "Vše co jsem se naučil o solární elektrárně sepsáno, abych to nezapomněl."
 type: post
-image: blog/solarni-elektrarna/image.png
+image: blog/solarni-elektrarna/image.jpg
 author: Martin Hubáček
 tags: ["solar"]
 ---
-
-{{< load-photoswipe >}}
-
 Soupis všeho kolem mého solárního počinu. Bude postupně sepisováno.. snad.
 <!--more-->
+
+{{< load-photoswipe >}}
 
 Pokud naleznete překlepy nebo máte návrhy na úpravy, vytvořte k tomuto článku pull request na GitHubu přes odkaz níže.
 
@@ -21,8 +20,6 @@ Nebo mi můžete napsat další návrhy [pod tento tweet](https://twitter.com/hu
 
 
 {{% toc %}}
-
-
 
 ## Úvod
 
@@ -69,7 +66,7 @@ Druhá, menší řada, která je v zimě zastíněná, má menší sklon asi 20�
 
 ![Vizualizace rozmístění panelů na garáži](garaz-letecky.png)
 
-Na výpočet rozměrů a úhlů postavení panelů s ohledem na nejnižší úhel slunce v zimě jsem si udělal ve FreeCADu hezký parametrický model pohledu z boku.
+Na výpočet rozměrů a úhlů postavení panelů s ohledem na nejnižší úhel slunce v zimě jsem si udělal ve [FreeCADu hezký parametrický model](solarni-elektrarna.FCStd) pohledu z boku.
 
 {{< figure src="/blog/solarni-elektrarna/freecad.png" >}}
 
@@ -149,23 +146,23 @@ U mě se elektrárna stále rozšiřuje a dost možná si natáhnu kabely druhý
 
 ### Odepínání panelů
 
-Zásadně se nesmí panely nebo pojistky odepínat pod zatížením. Při nižších napětích to asi trochu zajiskří, ale při stringu na 400V už při odpojení může vzniknout hezký oblouk. Ten když nezhasne, tak se může oblouk mezi vodiči pohybovat a propalovat kabeláž. Takže když odepínat tak zásadně bez zátěže, se korektními DC odepínači na odpovídající DC napětí a nebo prostě v noci :)
+Zásadně se nesmí panely nebo pojistky odepínat pod zatížením. Při nižších napětích to asi trochu zajiskří, ale při stringu na 400V už při odpojení může vzniknout [hezký oblouk](https://www.youtube.com/watch?v=S9a2oPCIMr0). Ten když nezhasne, tak se může oblouk mezi vodiči pohybovat a propalovat kabeláž. Takže když odepínat tak zásadně bez zátěže, se korektními DC odepínači na odpovídající DC napětí a nebo prostě v noci :)
 
 ### Odepínání baterií
 
-Když už jsme u toho odepínání. Tak pokud měnič baterie nabíjí, tak je nesmíte odpojit. Jakmile měnič drtí 1 kW do baterie a najednou mu zmizí zátěž, tak nedovede to tak rychle uregulovat a prý si tyhle čínské měniče zničí výstupní MOSFETy. Stává se to dokonce když se přeruší poddimenzovaná pojistka. Amperák to vyřešil jednou menší baterií, která je k měniči připojena napřímo bez ochran. Já se trochu ujišťuju že pojistky mám na 120 A a víc jak 25 A tam stejně současné panely nenacpou. A baterky mám dvě, takže i kdyby jedna se nějak odepnula, tak druhá to ještě může zachrnánit. Navíc jak jsem psal výše(níže?) tak měnič si s baterkou povídá a plynule si mění proud a snižuje jej před úplným nabitím. Takže tam snad moc nehrozí, že by baterka vypnula výstup a měnič tlačil výkon do vzduchu.
+Když už jsme u toho odepínání. Tak pokud měnič baterie nabíjí, tak je nesmíte odpojit. Jakmile měnič drtí 1 kW do baterie a najednou mu zmizí zátěž, tak nedovede to tak rychle uregulovat a prý si tyhle čínské měniče zničí výstupní MOSFETy. Stává se to dokonce když se přeruší poddimenzovaná pojistka. Amperák to vyřešil jednou menší baterií, která je k měniči připojena napřímo bez ochran. Já se trochu ujišťuju že pojistky mám na 120 A a víc jak 25 A tam stejně současné panely nenacpou. A baterky mám dvě, takže i kdyby jedna se nějak odepnula, tak druhá to ještě může zachránit. Navíc jak jsem psal výše(níže?) tak měnič si s baterkou povídá a plynule si mění proud a snižuje jej před úplným nabitím. Takže tam snad moc nehrozí, že by baterka vypnula výstup a měnič tlačil výkon do vzduchu.
 
 ## Zapojení do domu
 
 ### 3 vodičové TN-S
 
-**Tahle část je hodně na vodě, chybí schémata, důkazy. Číňan samozřejmě neví co je TN-C/S a v návodu tohle nebývá**
+**Tahle část je hodně na vodě, chybí vnitřní schéma měniče, důkazy. Číňan samozřejmě neví co je TN-C/S a v návodu tohle nebývá, na internetech nepanuje jasný názor.**
 
-Měnič má 3 vstupní a 3 výstupní svorky. PE, L, N. Vstupní a výstupní PE jsou spojeny mezi sebou uvnitř. Ale L a N mezi sebou spojeny nejsou. Resp. nikde jsem neviděl rozborku, nebo důkaz. Když jsem to měřil za chodu, tak to vypadá jakoby při zapojení to N spojení s distribuční sítí (DS) bylo, ale na polovině webů (těch evropských) je zdůrazněno, že měnič lze používat jen v síti TN-S. To znamená 3 vodičové zapojení. Jen tak se docílí toho, že PE vodič bude vždy zapojen na zemnící bod a L a N bude bude v závislosti na měniče (invertor nebo bypass) . Ale když to jelo z baterek, tak stejně jsem zam naměřil nulové napětí mezi vstupní a výstupní svorkou N. A byl tam odpor blízký nule.
+Měnič má 3 vstupní a 3 výstupní svorky. PE, L, N. Vstupní a výstupní PE jsou spojeny mezi sebou uvnitř. Ale L a N mezi sebou spojeny nejsou. Resp. nikde jsem neviděl rozborku, nebo důkaz. Když jsem to měřil za chodu, tak to vypadá jakoby při zapojení to N spojení s distribuční sítí (DS) bylo, ale na polovině webů (těch evropských) je zdůrazněno, že měnič lze používat jen v síti TN-S. To znamená 3 vodičové zapojení. Jen tak se docílí toho, že PE vodič bude vždy zapojen na zemnící bod a L a N bude zvolenu v závislosti na módu měniče (invertor nebo vnitřní bypass). Ale když to jelo z baterek, tak stejně jsem zam naměřil nulové napětí mezi vstupní a výstupní svorkou N. A byl tam odpor blízký nule.
 
 Možná jsem to vysvětlil trochu zmateně, ale není jasný závěr a eixstuje [několik vláken](https://forum.mypower.cz/viewtopic.php?f=115&t=7678) kde se to dodnes řeší pořád dokola :)
 
-Teď ještě čerstvá informace z mypower fóra, že HADEX, distributor podobného typu měniče, před pár dny odstranil toto doporučení o zákazku propojení vstupní a výstupní N svorky. Někteří uživatelé je mají protpojené několik let a nemají s tím problém.
+*Teď ještě čerstvá informace z mypower fóra, že HADEX, distributor podobného typu měniče, před pár dny odstranil toto doporučení o zákazu propojení vstupní a výstupní N svorky. Někteří uživatelé je mají propojené několik let a nemají s tím problém.*
 
 ### Přepínač sítí + interní bypass
 
