@@ -125,6 +125,7 @@ Ohledně kapacity je zas nutné si uvědomit, že pokud má měnič idle spotře
 
 Pořídil jsem pro začátek 2 ks, ale už teď nějak cítím, že bude třeba přikoupit. Navíc dělat elektrárnu teď před podzimem, kdy každým dnem je energie méně a méně, je dost depresivní 🙂
 
+**UPDATE 30.8.2022:** Přikoupil jsem Pylontech US3000C. Je to 3.55 kWh a celkově tedy mám 2*2.4 + 3.55 = **8.35 kWh**. Musím říct že to dost pomáhá ráno, kdy jsem byl skoro vždy kolem 10% SOC a nyní když je hezky tak mám klidně i 40% SOC. Takže už se dá bez obav hodit i pračka/myčka z baterek i když je mi to trochu proti srsti 🙂. Navíc tahle kapacita navíc pomohla když předchozí den bylo navečer zataženo/pršelo, nebo druhý den nesvítilo hned od rána. 
 
 ## Požární a elektrická bezpečnost
 
@@ -368,8 +369,20 @@ Do fotovoltaika se doporučují (nebo jsou povidnné?) proudové chrániče typu
 
 ## Zajímavé odkazy
 
-Video [Poul - Cena elektřiny pro domácnost 2022](https://www.youtube.com/watch?v=0230WbXfGw0)
+- Video [Poul - Cena elektřiny pro domácnost 2022](https://www.youtube.com/watch?v=0230WbXfGw0)
+- Opensource software na elektrická zapojení [https://qelectrotech.org/](https://qelectrotech.org/)
+- [ProfiCAD software](https://www.proficad.cz/) na elektrická zapojení. Na Windows, nelze export do PDF, lze obejít virtuální PDF tiskárnou. Na Linuxu to lze nějak rozchodit [dle návodu v mém Twítu.](https://twitter.com/hubmartin/status/1561629813093371904) 
 
-## Historie článku
+## Historie elektrárny
 
-18.8.2022 - 2400 Wp naležato, 4.8 kW baterky
+- 6.8.2022 - První test komponent s 1800 Wp naležato na garáži, 4.8 kW baterky, zapojen rack a pracovna
+- 11.8.2022 - Nevím co s elektřinou, připojuji zásuvky v 1.NP - obyvák, kuchyně (lednička, myčka, konvice, mikrovlnka, dětská ohřívačka jídla)
+- 18.8.2022 - 2400 Wp naležato, 4.8 kW baterky
+- 23.8.2022 - 3000 Wp, 8 panelů na konstrukci 35°, dva panely na plocho
+- 30.8.2022 - Přikoupení US3000C (3.55kWh), celkem 8.35 kWh
+- 15.9.2022 - Vypínám elektrárnu na pár dní (přepínač sítí na ČEZ a invertor vypnutý, dobíjení aktivní takže idle asi 10W?). Zataženo, déšť. Ono by si to poradilo a bypass funguje spolehlivě, ale zatím zkouším a uvidím za kolik dní se baterka zas nabije.
+
+## TODO
+
+- Přidat schéma + Inkscape
+- Vyzkoušet free soft na diagramy https://qelectrotech.org/
