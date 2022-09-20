@@ -175,6 +175,13 @@ Tento přepínač sítí ale nění nutný. Měnič má interní bypass, kdy př
 
 Bypassem jsem si párkrát při vybité baterii prošel a žádný spotřebič v pracovně nebo v kuchyni to nepoznal. A to byl vlastně v cca 4 kW zátěži.
 
+### Schéma zapojení
+
+Schéma budu postupně vylepšovat. Zde je pro představu první verze.
+
+{{< figure src="/blog/solarni-elektrarna/schema-zapojeni.png" >}}
+
+
 ### Postupné připojení okruhů
 
 Okruhy a jističe jsem na invertor zapojoval postupně. Někdy mě k tomu vedlo jak je dům historicky misty natažený 2 vodičově. Jindy zas kvůli dimenzování systému které by nestačilo některým spotřebičům.
@@ -248,6 +255,16 @@ Ačkoliv s Pylontechy přišel RJ45 kabel označený PYLON a INVERTER na obou ko
 To, že Axpert s bateriemi komunikuje signalizuje blikáním šestihranného symbolu baterie na displeji. Pokud do cca 3 minut měnič baterky nenajde, zobrazí chybu 61. Pokud nezapojíte GND, bude vám občas komunikace vypadávat a v grafech z dat Axpertu vám bude občas SOC skákat na hodnotu "0" 🙂.
 
 ![Axpert Pylontech pinout](pylontech-rj45.jpg)
+
+Pokud máte 2 a více baterií, tak se zapojují následovně:
+
+- Propojte mezi sebou všechny baterie přes Linkport. Hlavní baterie má nezapojený Linkport0, poslední baterie má nezapojený Linkport1
+- Na 4 násobném DIP switchi je třeba nastavit komunikační rychlost pro invertor. US2000C má DIP switch vzhůru nohama, ale platí že DIP switch je zapnutý v poloze kde je nápis "ON". Na všech jednotkách je nastaven DIP switch 1 na "ON", zbytek na "OFF". Tím se nastaví baudrate rychlost 9600. **POZOR po této změně je třeba udělat reset baterek** přes mechanický power switch, jinak se změna neaplikuje a měnič po čase zobrazí chybu **61**. 
+- Propojte RJ45 kabelem s pinoutem uvedený výše a to tak, že na US2000C kabel (pozor na správný konec kabelu) zapojíte do B/RS485 a na Axpertu do BMS konektoru.
+- Pro vlastní monitoring baterií se RPI zapojuje do portu Console viz. další kapitoly.
+
+{{< figure src="/blog/solarni-elektrarna/pylontech-zapojeni.png" >}}
+
 
 ### Dynamická změna proudu baterií
 
