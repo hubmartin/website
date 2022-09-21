@@ -370,7 +370,9 @@ Zde jsou heslovité nápady a postřehy bez ladu a skladu.
 
 Výstup z měniče je čistý sinus, takže žádné zubatice. Lze s ním tedy bez obav provozovat třeba synchronní motory, ty ani nevím velice, kde se ještě dnes vyskytují. Ve vysavačích jsou univerzální motory a ty si poradí se vším, včetně DC. Pokud teda nemají tyristorovou regulaci.
 
-Měnič je jednofázový, takže 3 fázové motory musíte provozovat buĎ z distribuční sítě, se třemi invertory, nebo s VFD měničem. Stejně si myslím, že VFD drivery jsou už tak cenově dostupné, že se vyplatí spíš pořídit jeden na občasné roztočení 3 fází, než mít 3 fázový měnič.
+Měnič je jednofázový, takže 3 fázové motory musíte provozovat buď z distribuční sítě, se třemi invertory, nebo s VFD měničem. Stejně si myslím, že VFD drivery jsou už tak cenově dostupné, že se vyplatí spíš pořídit jeden na občasné roztočení 3 fází, než mít 3 fázový měnič.
+
+(UPDATE: Tady jsem si trochu naběhl, protože levné 1F > 3F měniče neumí zvýšit 230V na 400V, takže buzený motor musíte zapojit do trojúhelníku na 230 V, pokud to podporuje.)
 
 ### Jistič na vstupu do měniče
 
