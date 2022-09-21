@@ -387,6 +387,7 @@ Do fotovoltaika se doporučují (nebo jsou povidnné?) proudové chrániče typu
 ## Zajímavé odkazy
 
 - Video [Poul - Cena elektřiny pro domácnost 2022](https://www.youtube.com/watch?v=0230WbXfGw0)
+- [TátaGeek napsal článek](https://tatageek.blog/2022/09/16/stavba-solarni-elektrarny-svepomoci/) o jeho solární elektrárně. Je to instalace na šikmou střechu s taškama a (pro)zatím má ohřev TUV. Obsahuje spoustu odkazů na zajímavé informace.
 - Opensource software na elektrická zapojení [https://qelectrotech.org/](https://qelectrotech.org/)
 - [ProfiCAD software](https://www.proficad.cz/) na elektrická zapojení. Na Windows, nelze export do PDF, lze obejít virtuální PDF tiskárnou. Na Linuxu to lze nějak rozchodit [dle návodu v mém Twítu.](https://twitter.com/hubmartin/status/1561629813093371904) 
 
