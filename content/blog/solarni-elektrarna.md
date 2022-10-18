@@ -406,3 +406,7 @@ Do fotovoltaika se doporučují (nebo jsou povidnné?) proudové chrániče typu
 
 - Přidat schéma + Inkscape
 - Vyzkoušet free soft na diagramy https://qelectrotech.org/
+- "Návratnost" při malých spotřebách
+- "Nevýhody" zapojení na 1 fázi a možné řešení
+- Cyklování - dobíjení několik dní a vybití v jeden den
+- Conky widget v Linuxu - jak tam dostat data z Axperta
