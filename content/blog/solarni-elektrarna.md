@@ -384,7 +384,88 @@ Pokud se baterie vybije, tak nastane zapnutí bypassu a pokud není žádná ene
 
 ### Proudové Chrániče
 
-Do fotovoltaika se doporučují (nebo jsou povidnné?) proudové chrániče typu B. Prý jsou imunní vůči nějakým reziduálním DC proudům. Víc k tomu nevím, musíte nastudovat.
+Do fotovoltaiky se doporučují (nebo jsou povinné?) proudové chrániče typu B. Prý jsou imunní vůči nějakým reziduálním DC proudům. Víc k tomu nevím, musíte nastudovat.
+
+## Náklady
+
+Zde jsou hlavní položky. Instalaci panelů a přívod do domu mi zařídila firma. V domě jsem si rozvaděč a předrátování prováděl již sám.
+Zatím zde tabulku hážu takhle nahrubo, ale snad je to lepší, než to sem dát jako obrázek.
+
+Taky jsem zde neuváděl kabeláž, jističe a práci s předrátováním hlavního rozvaděče. Každý to doma budete mít jinak složité (věřím, že jednodušší, jak já).
+
+| **Lokace**      | **Název**                                                | **ks** | **Cena celkem** |
+| --------------- | -------------------------------------------------------- | ------ | --------------- |
+| Garáž           | Fovotoltaické panely 300Wp                               | 12     | 29400           |
+|                 | hliníkový profil solární K2                              | 18     | 17244           |
+|                 | Spojovací materiál                                       | 1      | 1320            |
+|                 | Chemická kotva                                           | 1      | 399             |
+|                 | Betonové dlaždice                                        | 30     | 2850            |
+|                 | lepenka 50x50 pod betonové dlaždice                      | 20     | 1000            |
+|                 | Držák panelů koncový                                     | 32     | 2864            |
+|                 | Držák panelů středový                                    | 8      | 664             |
+|                 | Držák panelů climber                                     | 56     | 4032            |
+|                 | Spojka profilů                                           | 10     | 2150            |
+|                 | Ehlinik.cz konstrukce pro sklon 35°                      | 1      | 11950           |
+|                 | Hager 24M rozvodnice                                     | 1      | 630             |
+|                 | Přepěťová ochrana                                        | 1      | 2410            |
+|                 | lišty 40x70                                              | 6      | 678             |
+|                 | lišty 40x20                                              | 4      | 144             |
+|                 | Trubka ohebná                                            | 5      | 249.5           |
+|                 | Klip na kabel                                            | 35     | 227.5           |
+|                 | Legrand odpínač                                          | 2      | 440             |
+|                 | Příchytka na trubku                                      | 3      | 50              |
+| Trasa garáž-dům | Kabel solární 6mm (4 dráty pro 2 stringy)                | 110    | 3960            |
+|                 | kabel zemnící 10mm                                       | 30     | 1380            |
+| Tech. místnost  | Měnič Axpert MKS III - 5kW, 48V, 1xMPPT                  | 1      | 25000           |
+|                 | Pylontech US2000C 2.4kWh                                 | 2      | 67000           |
+|                 | Pylontech US3000c 3.5kWh                                 | 1      | 37000           |
+|                 | Merkur drátěné žlaby + montážni materiál                 | 10     | 3295            |
+|                 | OEZ 54M rozvodnice                                       | 1      | 1910            |
+|                 | ABB zásuvka Praktik                                      | 3      | 348             |
+|                 | Pojistky gPV                                             | 6      | 990             |
+|                 | OEZ odpínač                                              | 1      | 285             |
+|                 | Oko zemnící                                              | 1      | 40              |
+|                 | Přepínač sítí                                            | 1      | 600             |
+|                 | Jističe k měniči                                         | 2      | 500             |
+|                 | Elektroměry k měniči UME115L 5-45A 230V 50Hz             | 2      | 360             |
+|                 | Dutinky na drátování rozvaděčů                           | 1      | 250             |
+|                 | Bižu, krabice, jističe, pojistky, kabel, WAGO            |        | 1700            |
+| Práce           | Montáž (konstrukce, přivedení vodičů do tech. místnosti) |        | 21000           |
+|                 |                                                          |        |                 |
+|                 | **Total**                                                |        | **244320**      |
+|                 |                                                          |        |                 |
+| Nice to have    | Šroubovák eletrikářský                                   |        | 250             |
+|                 | Krimpovací kleště 4 hran                                 |        | 600             |
+|                 | Lisovací kleště na dutinky TIPA HS-04WF 4 - 10mm         |        | 350             |
+|                 | WEI NÁSTROJ MULTIFUNKČNÍ, QUADRO NO.16                   |        | 800             |
+|                 |                                                          |        |                 |
+|                 | **Total Total**                                          |        | **246320**      |
+
+
+## Rozšíření výkonu a ATS
+
+Po několika měsících funkční elektrárny se zamýšlím, jak mi celý koncept může růst do budoucna. Je tady jedno omezení a sice že vše mám na jedné fázi
+a hlavní jističe do domu mám 3x25 A. Takže nyní pokud mám 5 kW měnič a přepne mi do bypassu, tak mi ta jedna fáze z DS teoreticky utáhne **230*25 = 5750 W**. To je tedy naštěstí méně, než výkon měniče. Takže pri vybití baterie a zapnutí bypassu mi z DS určitě neumře 25A pojistka. Elektrickou troubu mám zapojenou
+pevně na ČEZ a ta si lupne i 3.5kW. Je zapojena na druhé fázi než elektrárna.
+
+Jak ale postupovat, když bych potřeboval vyšší výkon jak 5 kW? Jedna myšlenka byla mít dva stejné měniče a každý z nich na jiné fázi. Měnič bohužel umí jenom 3 fázovou konfiguraci se 3 kusy.
+Podle mě tam nejsou žádné překážky proč by 2 měniče nemohly jet na 2 fáze, ale výrobce se rozhodl, že to asi nestojí za ty komplikace.
+
+Pak je tu možnost spojit 2 měniče paraleleně na 1 fázi. Tím se získá 10 kW, ale pořád na jedné fázi. Ze slunce to bude fungovat a není zde problém, ale pokud budou měniče přetížené, nebo se vybije baterka, tak se zapne bypass. Jenže těch 10 kW je proud 43 A a to ta jedna pojistka s hodnotou 25 A neudrží.
+
+Nabízí se tedy následující řešení. Mít dva měniče na jedé fázi. Ale bypass řešit externě a s přezapojením fází. Ještě nevím zda bypass lze vypnout úplně, nebo jen při přetížení, různé návody to píší různě. Ale přinejhorším je možné měniče odpojit od vstupu 230 V. Tím pádem bypass nenastane.
+
+Druhá úprava je že je potřeba externí 3 fázový automatický přepínač sítí ATS (Automatic Transfer Switch). Ten obsahuje solenoidy/motor a s pomocí interní relé logiky dovede upřednostnit
+jeden ze dvou zdrojů napájení. Přepínač má 4 sekce, každou pro N, L1, L2, L3. Každá tato sekce má 2 vstupy - invertor/DS a 1 výstup - do domu.
+
+No a zde je ta finta. Z měničů tu jednu fázi přivedete na všechny 3 vstupy L1,L2,L3 tohoto ATS. A z DS přivedete tři fáze na odpovídající svorky L1,L2,L3. Tím pádem když pojede elektrárna tak sice dům 
+budete mít rozdělený na více "fází", ale všude bude vlastně stejná fáze. Samozřejmě vám na to nepoběží čistě 3 fázové motory.
+
+No a pokud elektrárna vypne, tak ATS přepne jako zdroj DS a zde již budete mít různé fáze a v domě tedy budete mít v různých okruzích různý fázový posuv o 120°.
+
+Myslím si že stejně to má i youda (mypower.cz) který produkuje YT videa s tesláčkem. [V tomto videu a čase](https://youtu.be/9nkCFEfZQQY?t=916) je možné vidět ten ATS switch. Doporučím celé video a určitě i mnoho dalších co tam má 🙂.
+
+Věřím, že v době kdy zvýšení výkonu budu řešit již na trhu budou zas lepší a výkonější měniče a že prostě můj stávající nahradím. Pořád musíte myslet že jeden Axpert má idle spotřebu 60 W ve dne v noci. A přes noc je to jak jsem psal až 1 kWh z baterky dolů. Takže snad nějaký 6 nebo 8kW měnič by můj problém do budoucna vyřešil a snad by bral jen těch 60 W a nikoliv 2x60 W kdybych spojil dva kusy. Ale to řeším jen ten idle a efektivitu, pořád ale budu muset mít ten transfer switch se 4 kontakty (buď manuál, nebo automat) a rozdělit fáze z DS.
 
 ## Zajímavé odkazy
 
@@ -410,3 +491,4 @@ Do fotovoltaika se doporučují (nebo jsou povidnné?) proudové chrániče typu
 - "Nevýhody" zapojení na 1 fázi a možné řešení
 - Cyklování - dobíjení několik dní a vybití v jeden den
 - Conky widget v Linuxu - jak tam dostat data z Axperta
+
