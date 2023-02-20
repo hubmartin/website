@@ -465,6 +465,8 @@ No a pokud elektrárna vypne, tak ATS přepne jako zdroj DS a zde již budete m�
 
 Myslím si že stejně to má i youda (mypower.cz) který produkuje YT videa s tesláčkem. [V tomto videu a čase](https://youtu.be/9nkCFEfZQQY?t=916) je možné vidět ten ATS switch. Doporučím celé video a určitě i mnoho dalších co tam má 🙂.
 
+{{< figure src="/blog/solarni-elektrarna/prepinac-siti-1f-3f.png" >}}
+
 Věřím, že v době kdy zvýšení výkonu budu řešit již na trhu budou zas lepší a výkonější měniče a že prostě můj stávající nahradím. Pořád musíte myslet že jeden Axpert má idle spotřebu 60 W ve dne v noci. A přes noc je to jak jsem psal až 1 kWh z baterky dolů. Takže snad nějaký 6 nebo 8kW měnič by můj problém do budoucna vyřešil a snad by bral jen těch 60 W a nikoliv 2x60 W kdybych spojil dva kusy. Ale to řeším jen ten idle a efektivitu, pořád ale budu muset mít ten transfer switch se 4 kontakty (buď manuál, nebo automat) a rozdělit fáze z DS.
 
 ## Zajímavé odkazy
