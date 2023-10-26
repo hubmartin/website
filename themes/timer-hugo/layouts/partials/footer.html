@@ -47,15 +47,12 @@
 <script src="{{ $script.Permalink }}"></script>
 {{ "<!-- google analitycs -->" | safeHTML }}
 
-
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id={{ .Site.Params.googleAnalitycsID }}"></script>
 <script>
-    /*window.dataLayer = window.dataLayer || [];
+    window.dataLayer = window.dataLayer || [];
     function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
 
-    gtag('config', 'UA-8883016-3');*/
+    gtag('config', '{{ .Site.Params.googleAnalitycsID }}');
 </script>
-
-{{ partial "consent.html" . }}

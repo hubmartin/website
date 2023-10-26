@@ -13,6 +13,16 @@
   <title>{{ .Title }}</title>
   <link rel="icon" href="{{ "images/favicon.ico" | absURL }}">
 
+  <!--- START cookie consent code --->
+  <style>
+    [class*="dialog-msg"] {  
+      font-family: Roboto !important;
+  }
+  </style>
+  <script src="https://cdn.jsdelivr.net/gh/sprucejoy/cookie-consent-autoblock-gdpr/cookie-consent.js"
+    crossorigin="anonymous"></script>
+  <!--- END cookie consent code --->
+
   {{ "<!-- Twitter Bootstrs CSS -->" | safeHTML }}
   <link rel="stylesheet" href="{{ "plugins/bootstrap/bootstrap.min.css" | absURL }}">
   {{ "<!-- Ionicons Fonts Css -->" | safeHTML }}
