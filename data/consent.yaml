@@ -1,0 +1,5 @@
+items:
+  - title: Google Anaytics
+    description: This code gives us insight into the number of people that visit our website.
+    is_functional: false
+    script_file: ga.js
