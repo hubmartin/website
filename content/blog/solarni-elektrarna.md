@@ -114,7 +114,7 @@ Tento Axpert se dá spojovat paralelně, takže je možné druhým kusem posíli
 
 Tady jsem dost řešil jestli pro první prototyp elektrárny olovo, nebo lithium. Naštěstí mi bylo olovo rozmluveno jedním solárníkem, dokonce i [Ampérák to komentoval](https://youtu.be/VXi13xUoCt0?t=840), že pokud nemáte přísun levných baterií tak lithium vydrží déle. Já v tom nejsem úplný expert takže můžete mít jiný názor 🙂
 
-Další rozhodování bylo zda si baterku postavit, nebo jít do hotových. Trochu jsem to studoval, ale řešil jsem hromadu jiných technickcýh záležitostí a návrh baterky jsem taky outsourcoval na čínského výrobce Pylontech.
+Další rozhodování bylo zda si baterku postavit, nebo jít do hotových. Trochu jsem to studoval, ale řešil jsem hromadu jiných technických záležitostí a návrh baterky jsem taky outsourcoval na čínského výrobce Pylontech.
 
 {{< figure src="/blog/solarni-elektrarna/pylontech.png" >}}
 
@@ -125,7 +125,7 @@ Ohledně kapacity je zas nutné si uvědomit, že pokud má měnič idle spotře
 
 Pořídil jsem pro začátek 2 ks, ale už teď nějak cítím, že bude třeba přikoupit. Navíc dělat elektrárnu teď před podzimem, kdy každým dnem je energie méně a méně, je dost depresivní 🙂
 
-**UPDATE 30.8.2022:** Přikoupil jsem Pylontech US3000C. Je to 3.55 kWh a celkově tedy mám 2*2.4 + 3.55 = **8.35 kWh**. Musím říct že to dost pomáhá ráno, kdy jsem byl skoro vždy kolem 10% SOC a nyní když je hezky tak mám klidně i 40% SOC. Takže už se dá bez obav hodit i pračka/myčka z baterek i když je mi to trochu proti srsti 🙂. Navíc tahle kapacita navíc pomohla když předchozí den bylo navečer zataženo/pršelo, nebo druhý den nesvítilo hned od rána. 
+**UPDATE 30.8.2022:** Přikoupil jsem Pylontech US3000C. Je to 3.55 kWh a celkově tedy mám 2*2.4 + 3.55 = **8.35 kWh**. Musím říct že to dost pomáhá ráno, kdy jsem byl skoro vždy kolem 10% SOC a nyní když je hezky tak mám klidně i 40% SOC. Takže už se dá bez obav hodit i pračka/myčka z baterek i když je mi to trochu proti srsti 🙂. Navíc tahle kapacita pomohla když předchozí den bylo navečer zataženo/pršelo, nebo druhý den nesvítilo hned od rána. 
 
 ## Požární a elektrická bezpečnost
 
